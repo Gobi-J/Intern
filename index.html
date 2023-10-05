@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore :-)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo-nav.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/f72d61014c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><img src="logo-nav.png" alt="" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <p><i class="fa-solid fa-language"></i> Eng</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="container">
+        <h1>QueryQuest</h1>
+        <h3>Let's dive into something new!!</h3>
+        <p>Turning Keywords into Knowledge for Tomorrow's Impact.</p>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter a Keyword (Eg. Java)"
+        />
+        <input
+          type="number"
+          id="limitIn"
+          placeholder="Enter number of articles need"
+        />
+        <button onclick="searchItem()">
+          <i class="fa-solid fa-magnifying-glass"></i><span>Search</span>
+        </button>
+      </div>
+      <div id="results"></div>
+    </div>
+    <section id="about">
+      <div class="content">
+        <h2>Your Ultimate Keyword Research Companion! 📊🔍</h2>
+        <h3>What We Offer</h3>
+        <p>🔬 <span>Keyword Research Tools: </span>Our cutting-edge keyword search tool simplifies the process of finding the most relevant and valuable articles for your research.</p>
+        <p>📈 <span>Trend Analysis: </span>Stay ahead of the curve with our trend analysis tools, helping you identify emerging topics and opportunities in your field.</p>
+        <p>🧐 <span>Insightful Guides: </span>Access our comprehensive guides and resources to master the art of keyword research and stay up-to-date with industry best practices.</p>
+        <p>📰 <span>Latest Updates: </span>Stay informed about the latest developments in the world of keywords, SEO, and digital marketing through our blog and newsletters.</p>
+      </div>
+    </section>
+    <section id="news">
+      <div class="newstext">
+        <h4>Signup for Newsletter</h4>
+        <p>Get E-mail updates about new <span>innovations</span></p>
+      </div>
+      <div class="newsform">
+        <input type="email" placeholder="Your email address" />
+        <button>Signup</button>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; All rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
