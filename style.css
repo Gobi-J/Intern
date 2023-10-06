@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
 :root {
   --back: #ccdbfd;
   --text: #292929;
   --text2: #027843;
   --white: #eefaff;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,7 @@
 body {
   width: 100%;
   background: linear-gradient(to top right, #ddd, #ccdbfd);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 header {
   position: sticky;
@@ -106,20 +106,16 @@ nav li a:hover {
   border-radius: 16px;
   margin-top: 10px;
 }
-
 .container button i {
   margin-right: 3px;
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
 .container button span {
   transition: all 0.5s linear;
 }
-
 .container button:hover i {
   transform: scale(1.1) translateX(27px);
 }
-
 .container button:hover span {
   opacity: 0;
 }
@@ -154,6 +150,9 @@ nav li a:hover {
   font-size: 20px;
   color: var(--text2);
 }
+#results h2:hover {
+  text-decoration: underline;
+}
 #results a {
   text-decoration: none;
   color: var(--text2);
@@ -170,42 +169,85 @@ nav li a:hover {
 }
 
 /* ---------- About section ----------- */
-#about{
-    scroll-margin-top: 80px;
-    height: calc(100vh - 80px);
-    background: url('background.svg') center no-repeat;
-    background-size: cover;
-    color: var(--white);
+#about {
+  scroll-margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  background: url("background.svg") center no-repeat;
+  background-size: cover;
+  color: var(--white);
 }
-.content{
-    width: 90%;
-    max-width: 800px;
-    height: 100%;
-    margin: auto;
-    padding-top: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.content {
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  margin: auto;
+  padding-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.content h3{
-    margin: 20px 0;
+.content h3 {
+  margin: 20px 0;
 }
-.content p{
-    font-size: 20px;
-    margin: 20px 0;
+.content p {
+  font-size: 20px;
+  margin: 20px 0;
 }
-.content p span{
-    color: #e3b212;
+.content p span {
+  color: #e3b212;
 }
+
+/* Contact Section */
+#contact {
+  min-height: 200px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+#contact > div {
+  padding: 10px;
+}
+#contact .logo {
+  padding: 0;
+}
+.des {
+  width: 30%;
+  font-size: 17px;
+}
+.des cite {
+  display: block;
+  text-align: right;
+}
+.social h3 {
+  color: #027843;
+}
+.social a {
+  width: fit-content;
+  text-align: center;
+  margin: 5px;
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+}
+.social i:hover {
+  transform: scale(1.2);
+}
+.social a:hover {
+  text-decoration: underline;
+}
+
 /* ---------- News Section ----------- */
 #news {
-  padding: 20px;
+  padding: 40px 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
   background-color: #6faae6ae;
+  text-align: center;
 }
 #news h4 {
   font-size: 22px;
@@ -225,10 +267,11 @@ nav li a:hover {
 #news .newsform {
   width: 60%;
   display: flex;
+  padding-bottom: 15px;
 }
 #news input {
-    background: none;
-    padding: 5px 10px;
+  background: none;
+  padding: 5px 10px;
   width: 100%;
   margin: 0;
   border: 1px solid;
@@ -241,63 +284,75 @@ nav li a:hover {
   padding: 10px;
   cursor: pointer;
   color: var(--white);
-  background: linear-gradient(to right, var(--text), var(--text2), var(--text));;
+  background: linear-gradient(to right, var(--text), var(--text2), var(--text));
 }
-footer{
+
+/* Footer */
+footer {
+  background: #5088c0;
+  padding: 20px;
+}
+footer > div {
+  width: fit-content;
+  margin: auto;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 700px) {
+  header {
     height: 50px;
-    background: #6faae6ae;
-    display: grid;
-    place-content: center;
-}
-
-@media screen and (max-width:600px) {
-    header {
-        flex-direction: column;
-        justify-content: center;
-      }
-      .logo {
-        padding-left: 0;
-      }
-      nav {
-        width: 90%;
-      }
-      nav ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-      }
-      nav li {
-        font-size: 20px;
-        font-weight: 500;
-        list-style: none;
-      }
-      nav li a {
-        text-decoration: none;
-        color: var(--white);
-      }
-      nav li a:hover {
-        text-decoration: underline;
-      }
-
-      #about{
-        height: fit-content;
-      }
-
-    .container h1 {
-        font-size: 40px;
-    }
-    .container h3 {
-        font-size: 18px;
-        margin: 20px 0;
-    }
-    .container p {
-        font-size: 15px;
-    }
-    .container input {
-        font-size: 18px;
-        margin: 10px;
-    }
-    #news .newsform{
-        width: 90%;
-    }
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav {
+    display: none;
+  }
+  .main {
+    min-height: calc(100vh - 50px);
+  }
+  .container h1 {
+    font-size: 40px;
+  }
+  .container h3 {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  .container p {
+    font-size: 15px;
+  }
+  .container input {
+    font-size: 18px;
+    margin: 10px;
+  }
+  .container input::placeholder {
+    font-size: 14px;
+  }
+  #about p {
+    font-size: 18px;
+  }
+  #news .newsform {
+    width: 85%;
+  }
+  #contact {
+    flex-direction: column;
+  }
+  .des {
+    width: unset;
+    max-width: 230px;
+    font-size: 17px;
+  }
+  .social {
+    text-align: center;
+  }
+  #news h4 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #news p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  footer p {
+    font-size: 12px;
+  }
 }
