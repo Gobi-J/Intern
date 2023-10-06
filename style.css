@@ -172,6 +172,7 @@ nav li a:hover {
 #about {
   scroll-margin-top: 80px;
   min-height: calc(100vh - 80px);
+  height: 100vh;
   background: url("background.svg") center no-repeat;
   background-size: cover;
   color: var(--white);
@@ -326,6 +327,9 @@ footer > div {
   }
   .container input::placeholder {
     font-size: 14px;
+  }
+  #about{
+    height: fit-content;
   }
   #about p {
     font-size: 18px;
