@@ -55,3 +55,7 @@ function searchItem() {
     }
   }
   
+
+  function submitNews(){
+    alert("You have been added to our subscribers!!")
+  }
